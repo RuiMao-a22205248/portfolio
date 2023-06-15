@@ -9,9 +9,13 @@
     <meta name="author" content="Rui Mao">
     <meta name="description" content="Portfolio">
     <meta name="keywords" content="palavras chave">
+    <script src="https://kit.fontawesome.com/646b5e7836.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
     <title>RUI MAO</title>
     {% load static %}
-    <link rel="icon" href="{% static 'portfolio/images/image.jpg' %}" type="image/x-icon" sizes="196x196"/>
+    <link rel="icon" href="{% static 'portfolio/images/RM.ico' %}" type="image/x-icon" sizes="196x196"/>
 </head>
 
 <style>
@@ -19,20 +23,11 @@
 </style>
 
 <body>
-<header>
-    <div>Rui Mao</div>
-    <nav>
-        <a href="{% url 'portfolio:home' %}">home</a>
-        <a href="">products</a>
-        <a href="">about</a>
-        <a href="">contact</a>
-    </nav>
-</header>
 
-<main>
-    {% block main %}
-    {% endblock main %}
-</main>
 
-<footer>ULHT, 2023</footer>
+    {% block index %}
+    {% endblock index %}
+
+
+
 </body>
