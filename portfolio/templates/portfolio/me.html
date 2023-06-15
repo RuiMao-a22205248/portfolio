@@ -1,1 +1,437 @@
-{% extends 'portfolio/layout.html' %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <meta name="author" content="Rui Mao">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="palavras chave">
+    <script src="https://kit.fontawesome.com/646b5e7836.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+
+	<title >About Me - Rui Mao</title>
+    <link rel="icon" href="img/RM.ico" type="image/x-icon" sizes="196x196"/>
+</head>
+
+
+<style>
+
+* {
+	box-sizing: border-box;
+
+	font-family: 'Chakra Petch', sans-serif;
+	scroll-behavior: smooth;
+	
+  
+}
+
+    body {
+    
+}
+
+.licenciatura {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.licenciatura h1 {
+    text-align: center;
+    color: #333;
+}
+
+.anos{
+    background-color: #9e9e9e;
+}
+
+.cadeiras {
+    margin-top: 20px;
+}
+
+.cadeira {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.cadeira h3 {
+    color: #666;
+}
+
+.cadeira p {
+    color: #999;
+}
+
+.cadeira a {
+    color: #333;
+    text-decoration: none;
+}
+
+.cadeira a:hover {
+    text-decoration: underline;
+}
+
+h2, h3, h4 {
+    position: relative;
+    padding-left: 15px;
+}
+
+h3 {
+    padding-left: 30px;
+}
+
+h4 {
+    padding-left: 45px;
+}
+
+h2:hover, h3:hover, h4:hover {
+    opacity: 0.7;
+}
+
+.details{
+  padding:10px 10px 10px 60px;
+  background-color: #cecbcb8e;
+
+  
+}
+
+</style>
+
+<body>
+    <div class="licenciatura">
+        <h1>Licenciatura</h1>
+        <div class="anos">
+            <!-- ano 1 -->
+            <!-- ano 1 semestre 1-->
+            <h2 onclick="showHideDetails('ano1', 'sinalAno1')">
+                <span id="sinalAno1">+</span> 1ª Ano
+            </h2>
+            <div id="ano1" style="display: none;">
+                <h3 onclick="showHideDetails('semestre1', 'sinalSem1')">
+                    <span id="sinalSem1">+</span> 1ª Semestre
+                </h3>
+                <div id="semestre1" style="display: none;">
+    
+                    <h4 onclick="showHideDetails('cadeira1', 'sinalCad1')">
+                        <span id="sinalCad1">+</span> Fundamentos de Física
+                    </h4>
+                    <div id="cadeira1" class="details" style="display: none;">
+                        <p>1ºAno | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️ </p>
+                        <p>Professores: 
+                            <a href="https://www.linkedin.com/in/cristiane-ferreira-nunes-b848077b/?originalSubdomain=pt">Cristiane Ferreira Nunes </a> 
+                        </p>
+                    </div>
+                  
+                   <h4 onclick="showHideDetails('cadeira2', 'sinalCad2')">
+                        <span id="sinalCad2">+</span> 
+                        Fundamentos de Programação
+                    </h4>
+                    <div id="cadeira2" class="details" style="display: none;">
+                        <p>1ºAno | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">Pedro Alve</a> 
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira3', 'sinalCad3')">
+                        <span id="sinalCad3">+</span> Matemática Discreta
+                    </h4>
+                    <div id="cadeira3" class="details" style="display: none;">
+                        <p>1ºAno | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">TERESA ALMADA</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira4', 'sinalCad4')">
+                        <span id="sinalCad4">+</span> Matemática I 
+                    </h4>
+                    <div id="cadeira4" class="details" style="display: none;">
+                        <p>1ºAno | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">ANDRE DA FONSECA </a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira5', 'sinalCad5')">
+                        <span id="sinalCad5">+</span> Sistemas Digitais
+                    </h4>
+                    <div id="cadeira5" class="details" style="display: none;">
+                        <p>1ºAno | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">Maria Silva Fino</a> 
+
+                        </p>
+                    </div>
+                </div>
+                <h3 onclick="showHideDetails('semestre2', 'sinalSem2')">
+                    <span id="sinalSem2">+</span> Segundo Semestre
+                </h3>
+
+                 <!-- ano 1 semestre 2-->
+                <div id="semestre2" style="display: none;">
+
+                    <h4 onclick="showHideDetails('cadeira6', 'sinalCad6')">
+                        <span id="sinalCad6">+</span>Álgebra Linear 
+                    </h4>
+                    <div id="cadeira6" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 5 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">TERESA ALMADA</a> 
+
+                        </p>
+                    </div>
+                  
+                   <h4 onclick="showHideDetails('cadeira7', 'sinalCad7')">
+                        <span id="sinalCad7">+</span> Algoritmia e Estruturas de Dados 
+                    </h4>
+                    <div id="cadeira7" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">Pedro Alve</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira8', 'sinalCad8')">
+                        <span id="sinalCad8">+</span> Arquitetura de Computadores
+                    </h4>
+                    <div id="cadeira8" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 5 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> SERGIO MESTRE FERREIRA </a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira9', 'sinalCad9')">
+                        <span id="sinalCad9">+</span> Competências Comportamentais
+                    </h4>
+                    <div id="cadeira9" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 4 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">DIOGO GIL MORAIS </a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira10', 'sinalCad10')">
+                        <span id="sinalCad10">+</span> Linguagens de Programação I
+                    </h4>
+                    <div id="cadeira10" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 5 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> Pedro Arroz Serra </a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira11', 'sinalCad11')">
+                        <span id="sinalCad11">+</span> Matemática II 
+                    </h4>
+                    <div id="cadeira11" class="details" style="display: none;">
+                        <p>1ºAno | 2º Semestre | ECTS: 5 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> ANDRE DA FONSECA </a> 
+
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+            <!-- ano 2 -->
+            <!-- ano 2 semestre 1-->
+            <h2 onclick="showHideDetails('ano2', 'sinalAno2')">
+                <span id="sinalAno2">+</span> 2º Ano
+            </h2>
+            <div id="ano2" style="display: none;">
+                <h3 onclick="showHideDetails('semestre3', 'sinalSem3')">
+                    <span id="sinalSem3">+</span> 1º Semestre
+                </h3>
+                <div id="semestre3" style="display: none;">
+    
+                    <h4 onclick="showHideDetails('cadeira12', 'sinalCad12')">
+                        <span id="sinalCad12">+</span> Arquiteturas Avançadas de Computadores
+                    </h4>
+                    <div id="cadeira12" class="details" style="display: none;">
+                        <p>2º Ano | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> Pedro Arroz Serra </a> 
+
+                        </p>
+                    </div>
+                  
+                   <h4 onclick="showHideDetails('cadeira13', 'sinalCad13')">
+                        <span id="sinalCad13">+</span> Base de Dados
+                    </h4>
+                    <div id="cadeira13" class="details" style="display: none;">
+                        <p>2º Ano | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> RUI NOBRE RIBEIRO</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira14', 'sinalCad14')">
+                        <span id="sinalCad14">+</span> Linguagens de Programação II
+                    </h4>
+                    <div id="cadeira14" class="details" style="display: none;">
+                        <p>2º Ano | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href=""> Pedro Alve</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira15', 'sinalCad15')">
+                        <span id="sinalCad15">+</span> Sinais e Sistemas
+                    </h4>
+                    <div id="cadeira15" class="details" style="display: none;">
+                        <p>2º Ano | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">João Fidalgo Canto</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira16', 'sinalCad16')">
+                        <span id="sinalCad16">+</span> Sistemas Operativos
+                    </h4>
+                    <div id="cadeira16" class="details" style="display: none;">
+                        <p>2º Ano | 1º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">DANIEL MOZART SILVEIRA</a> 
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ano 2 semestre 2-->
+                <h3 onclick="showHideDetails('semestre4', 'sinalSem4')">
+                    <span id="sinalSem4">+</span> Segundo Semestre
+                </h3>
+                <div id="semestre4" style="display: none;">
+
+                    <h4 onclick="showHideDetails('cadeira17', 'sinalCad17')">
+                        <span id="sinalCad17">+</span> Engenharia de Requisitos e Testes 
+                    </h4>
+                    <div id="cadeira17" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️</p>
+                        <p>Professores: 
+                            <a href="">RUI NOBRE RIBEIRO</a> 
+
+                        </p>
+                    </div>
+                  
+                   <h4 onclick="showHideDetails('cadeira18', 'sinalCad18')">
+                        <span id="sinalCad18">+</span> Nome da Cadeira
+                    </h4>
+                    <div id="cadeira18" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️</p>
+                        <p>Professores: 
+                            <a href="">RUI NOBRE RIBEIRO</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira19', 'sinalCad19')">
+                        <span id="sinalCad19">+</span> Computação Gráfica
+                    </h4>
+                    <div id="cadeira19" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">João Pedro Carvalho</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira20', 'sinalCad20')">
+                        <span id="sinalCad20">+</span> Programação Web
+                    </h4>
+                    <div id="cadeira20" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">Lúcio Studer Ferreira</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira21', 'sinalCad21')">
+                        <span id="sinalCad21">+</span> Redes de Computadores
+                    </h4>
+                    <div id="cadeira21" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️</p>
+                        <p>Professores: 
+                            <a href="">João Pedro Pavia</a> 
+
+                        </p>
+                    </div>
+
+                    <h4 onclick="showHideDetails('cadeira21', 'sinalCad21')">
+                        <span id="sinalCad21">+</span> Sistemas de Suporte à Decisão
+                    </h4>
+                    <div id="cadeira21" class="details" style="display: none;">
+                        <p>2º Ano | 2º Semestre | ECTS: 6 | Ano letivo: 2022/2023 | Ranking: ❤️❤️</p>
+                        <p>Professores: 
+                            <a href="">RUI NOBRE RIBEIRO</a> 
+
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="educacao">
+            <h1>Educação</h1>
+            <h2>Ensino Básico : Na China</h2>
+            <h2>Ensino Secundário (Cursos Profissionais) : <a href="https://aeddinislisboa.wixsite.com/aeddinis">AGRUPAMENTO DE ESCOLAS D. DINIS LISBOA</a></h2>
+            <h2>Ensino superior : <a href="https://www.ulusofona.pt/lisboa/licenciaturas/engenharia-informatica">Universidade Lusófona</a></h2>
+            
+        </div>
+    
+        <div class="habilidades">
+            <h1>Aptidões e competências pessoais</h1>
+            <!-- Conteúdo da seção Aptidões e competências pessoais aqui... -->
+        </div>
+    
+        <div class="interesses">
+            <h1>Interesses e hobbies</h1>
+            <!-- Conteúdo da seção Interesses e hobbies aqui... -->
+        </div>
+    
+        <div class="experiencia">
+            <h1>Experiência profissional</h1>
+            <!-- Conteúdo da seção Experiência profissional aqui... -->
+        </div>
+
+    </div>
+
+    <script>
+
+    function showHideDetails(id, sinalId) {
+    var x = document.getElementById(id);
+    var sinal = document.getElementById(sinalId);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        sinal.textContent = "-";
+        x.classList.add("expand-animation");
+    } else {
+        x.style.display = "none";
+        sinal.textContent = "+";
+        x.classList.remove("expand-animation");
+    }
+}
+
+    </script>
+</body>
+</html>
