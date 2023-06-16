@@ -11,5 +11,7 @@ urlpatterns = [
     path('pw/', views.pw_view, name="pw"),
     path('blog/', views.blog_view, name="blog"),
     path('site/', views.me_view, name="site"),
-    path('tool/', views.tool_view, name="tool")
+    path('tool/', views.tool_view, name="tool"),
+    path('login/', views.login_view, name='login'),
+    path('logout', views.logout_view, name='logout')
 ]
